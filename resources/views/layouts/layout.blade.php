@@ -33,15 +33,15 @@
     @auth
     <div class="sidebar" id="sidebar">
       <div class="sidebar-menu">
-        <a href="#" class="sidebar-link">Home</a>
-        <a href="#" class="sidebar-link">Todos</a>
+        <a href="/" class="sidebar-link">Home</a>
+        <a href="{{ route('todos.create') }}" class="sidebar-link">Todos</a>
         <a href="#" class="sidebar-link">Note</a>
         <a href="#" class="sidebar-link">Transaction</a>
       </div>
     </div>
     <div class="sidebar-toggle" toggle-for="sidebar"></div>
     @endauth
-    
+
     @yield('content')
   </body>
 </html>
