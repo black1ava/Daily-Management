@@ -41,8 +41,7 @@
     </div>
     <div class="sidebar-toggle" toggle-for="sidebar"></div>
     @endauth
-    <div class="main-content">
-      @yield('content')
-    </div>
+    
+    @yield('content')
   </body>
 </html>

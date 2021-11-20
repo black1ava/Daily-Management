@@ -62,7 +62,20 @@ body {
 }
 
 .main-content {
-  padding: 0px 20px 20px 20px;
+  position: fixed;
+  width: 100vw;
+  height: calc(100vh - 60px);
+  z-index: -2;
+}
+
+.p-fixed {
+  position: fixed;
+}
+
+.logged-in {
+  width: calc(100vw - 100px);
+  top: 100px;
+  left: 70px;
 }
 
 .card {
@@ -148,7 +161,7 @@ form {
 }
 
 .center {
-  height: calc(100vh - 56px);
+  height: calc(100vh - 50px);
   display: grid;
   place-items: center;
 }
@@ -281,9 +294,78 @@ form {
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.4);
-  z-index: -100;
+  z-index: -1;
 }
 
 .dark-screen.active {
   display: inline-block;
+}
+
+.tab {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.tab-menu {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--white);
+}
+
+.tab-link {
+  padding: 10px 20px;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  background-color: var(--white);
+}
+
+.tab-link:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.tab-link.active {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: inline-block;
+}
+
+table{
+  width: 100%;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.help-text {
+  color: grey;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th {
+  border-collapse: collapse;
+  border-bottom: 1px solid var(--dark);
+}
+
+td {
+  padding: 10px 0px;
+}
+
+@media screen and (max-width: 720px){
+  .card{
+    width: 80%;
+  }
 }

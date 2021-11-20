@@ -31,4 +31,28 @@ window.onload = function(){
       setElementsActive();
     });
   });
+
+  //tabs
+  const tabLinks = document.getElementsByClassName('tab-link');
+  Array.prototype.forEach.call(tabLinks, function(tabLink){
+
+    tabLink.addEventListener('click', function(){
+      tabLink.setAttribute('class', 'tab-link active');
+
+      const id = tabLink.getAttribute('content-id');
+      const content = document.getElementById(id);
+      content.setAttribute('class', 'tab-content active');
+
+      const otherTabLinks = Array.prototype.filter.call(tabLinks, function(link){
+        return link !== tabLink;
+      });
+
+      otherTabLinks.forEach(function(link){
+        link.setAttribute('class', 'tab-link');
+        const id = link.getAttribute('content-id');
+        const content = document.getElementById(id);
+        content.setAttribute('class', 'tab-content');
+      });
+    });
+  });
 }

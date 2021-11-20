@@ -1,6 +1,7 @@
 @extends('layouts.layout')
 
 @section('content')
+<div class="main-content">
   <div class="center">
     <div class="card">
       <div class="card-header">
@@ -41,4 +42,5 @@
       </div>
     </div>
   </div>
+</div>
 @endsection
